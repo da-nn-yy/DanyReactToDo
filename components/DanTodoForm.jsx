@@ -1,13 +1,14 @@
 import { useState } from "react"
 
-const DanTodoForm =() => {
+const DanTodoForm =(props) => {
   const [newItem,setNewItem] = useState("")
   
 
    const handleSubmit = (e) =>{
      e.preventDefault()
+     if (newItem === "") return
      
-     addTodo(newItem)
+     props.onSubmit(newItem)
 
      setNewItem("")
   }
