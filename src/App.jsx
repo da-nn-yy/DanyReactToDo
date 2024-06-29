@@ -1,11 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles.css'
 import DanTodoForm from '../components/DanTodoForm'
 import TodoList from '../components/TodoList'
-import DanTodoItems from '../components/DanTodoItems'
+
 
 export default function App() {
-  const [todos,setTodos] = useState([])
+  const [todos,setTodos] = useState(() => {
+    const storedTodos = localStorage.getItem('DanItems')
+    if(storedTodos == null) return []
+
+    return JSON.parse(storedTodos)
+  })
+
+  useEffect(() => {
+    localStorage.setItem('DanItems',JSON.stringify(todos))
+  },[todos])
 
 const addTodo = (title) => {
   setTodos(currentTodos => {
@@ -15,9 +24,7 @@ const addTodo = (title) => {
       ]
     })
 }
-  
-
-  const toggleTodo = (id,completed) => {
+const toggleTodo = (id,completed) => {
     setTodos(currentTodos => {
       return currentTodos.map(todo => {
         if (todo.id === id) {
@@ -26,9 +33,8 @@ const addTodo = (title) => {
         return todo
       })
     })
-  }
-
-  const deleteTodo = (id) => {
+}
+const deleteTodo = (id) => {
     setTodos(currentTodos => {
       return(currentTodos.filter(todo => todo.id != id))
     })
