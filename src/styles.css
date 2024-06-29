@@ -38,14 +38,14 @@ body {
   background: hsl(200, 100%, 50%, 0.2);
 }
 
-.btn.btn-danger {
+.btn.btn-delete {
   background: hsl(0, 100%, 40%, 0.1);
   border: 1px solid hsl(0, 100%, 40%);
   color: hsl(0, 100%, 40%);
 }
 
-.btn.btn-danger:hover,
-.btn.btn-danger:focus-visible {
+.btn.btn.btn-delete:hover,
+.btn.btn.btn-delete:focus-visible {
   background: hsl(0, 100%, 40%, 0.2);
 }
 
