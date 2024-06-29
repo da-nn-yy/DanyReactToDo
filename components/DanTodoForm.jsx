@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const DanTodoForm =(props) => {
+const DanTodoForm =({onSubmit}) => {
   const [newItem,setNewItem] = useState("")
   
 
@@ -8,10 +8,25 @@ const DanTodoForm =(props) => {
      e.preventDefault()
      if (newItem === "") return
      
-     props.onSubmit(newItem)
+     onSubmit(newItem)
 
      setNewItem("")
   }
+  /// ////   OR ///////// 
+  
+  // const DanTodoForm = (props) => {
+  //   const [newItem,setNewItem] = useState("")
+  
+
+  //  const handleSubmit = (e) =>{
+  //    e.preventDefault()
+  //    if (newItem === "") return
+     
+  //    props.onSubmit(newItem)
+
+  //    setNewItem("")
+  // }
+
 
   return (
     <>
