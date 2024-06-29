@@ -1,11 +1,12 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
 
+* {
+  font-family: "Poppins";
+  box-sizing: border-box;
+  
+}
 body {
-  background-color: linear-gradient(rgb(156, 238, 231), rgb(155,173,255));
-  color: hsl(200, 100%, 90%);
+  background-color: rgb(1, 36, 43);
+  color: hsl(200, 100%, 94%);
   max-width: 400px;
   padding: 1rem;
   margin: 0 auto;
@@ -13,53 +14,68 @@ body {
 
 .new-item-form {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction:column;
+  gap: 1rem;
 }
 
 .form-row {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.5rem;
 }
 
 .btn {
-  background: rgb(0, 129, 194);
-  border: 1px solid hsl(200, 100%, 50%);
-  color: hsl(0, 0%, 100%);
-  padding: 0.25em 0.5em;
-  border-radius: 0.25em;
-  cursor: pointer;
-  outline: none;
+    width:100%;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: rgb(255, 210, 9);
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    text-align: center;
+    border: none;
 }
 
 .btn:hover,
 .btn:focus-visible {
-  opacity: 0.5;
+  background-color: #f7ed62;
+    box-shadow: 0px 0px 20px -18px;
+}
+.btn:active {
+  transform: scale(0.95);
 }
 
 .btn.btn-delete {
   background: hsl(0, 100%, 40%, 0.1);
   border: 1px solid hsl(0, 100%, 40%);
   color: hsl(0, 100%, 40%);
+  width: 100px;
 }
 
 .btn.btn.btn-delete:hover,
 .btn.btn.btn-delete:focus-visible {
-  background: hsl(0, 100%, 40%, 0.2);
+  background: hsla(0, 99%, 43%, 0.2);
 }
 
 .new-item-form input {
-  outline: none;
-  border: 1px solid hsl(200, 100%, 40%);
-  background: hsl(200, 100%, 30%);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  color: hsl(200, 100%, 90%);
+  border: 2px solid transparent;
+    width:100%;
+    height: 3em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 7px;
+    transition: all 0.5s;
 }
 
-.new-item-form input:focus {
-  border: 1px solid hsl(200, 100%, 70%);
+.new-item-form input:focus,
+.new-item-form input:hover{
+  border: 2px solid #dfd008;
+    box-shadow: 0px 0px 0px 7px rgba(212, 202, 55, 0.2);
+    background-color: white;
 }
 
 .header {
@@ -73,22 +89,24 @@ body {
   padding: 0;
   margin-left: 1rem;
   list-style: none;
+  font-size: 1.2rem;
 }
 
 .list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
+  color: hsl(51, 55%, 49%);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.5rem;
 }
 
 .list li {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
 
 .list li label {
@@ -99,7 +117,7 @@ body {
 }
 
 .list li:has(input:focus-visible) label {
-  outline: 1px solid hsl(200, 100%, 50%);
+  outline: 1px solid hsl(60, 100%, 99%);
 }
 
 .list li input {
@@ -116,7 +134,7 @@ body {
   display: block;
   width: 0.9rem;
   height: 0.9rem;
-  background: hsl(200, 100%, 90%);
+  background: hsl(60, 100%, 98%);
   border-radius: 0.25em;
   display: flex;
   justify-content: center;
@@ -124,18 +142,21 @@ body {
 }
 
 .list li label:hover::before {
-  background: hsl(200, 100%, 80%);
+  background: hsl(56, 78%, 51%);
 }
 
 .list li:has(input:checked) label::before {
   content: "✔";
-  background: hsl(200, 100%, 40%);
-  color: hsl(200, 100%, 90%);
+  background: hsl(54, 100%, 50%);
+  color: hsl(252, 93%, 5%);
   font-size: 0.75rem;
   font-weight: bold;
 }
 
 .list li:has(input:checked) label:hover::before {
-  background: hsl(200, 100%, 30%);
+  background: hsl(56, 100%, 48%);
+}
+h3{
+  margin: 0;
 }
 
