@@ -1,6 +1,6 @@
 import DanTodoItems from "./DanTodoItems"
 
-const TodoList = ( {todos} ) => {
+const TodoList = ( {todos,toggleTodo,deleteTodo} ) => {
   
   
 
@@ -14,6 +14,8 @@ const TodoList = ( {todos} ) => {
           <DanTodoItems // id={todo.id} // completed={todo.completed}  title={todo.title}    OR  SIMPLY
           {...todo}
           key={todo.id}
+          deleteTodo={deleteTodo}
+          toggleTodo={toggleTodo}
           />
         )
       })}

@@ -37,7 +37,7 @@ const addTodo = (title) => {
    <>
     <DanTodoForm onSubmit={addTodo}/>
     <h1 className="header">Todo List</h1>
-    <TodoList todos={todos}/>
+    <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
     
    </>
   )
