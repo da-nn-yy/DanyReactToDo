@@ -1,22 +1,19 @@
 import { useState } from 'react'
 import './styles.css'
+import DanTodoForm from '../components/DanTodoForm'
 
 export default function App() {
-  const [newItem,setNewItem] = useState("")
   const [todos,setTodos] = useState([])
 
-
-  const handleSubmit = (e) =>{
-     e.preventDefault()
-
-     setTodos(currentTodos => {
+const addTodo = (title) => {
+  setTodos(currentTodos => {
        return [
        ...currentTodos, 
-       {id:crypto.randomUUID(), title:newItem, completed: false },
+       {id:crypto.randomUUID(), title, completed: false },
       ]
     })
-     setNewItem("")
-  }
+}
+  
 
   const toggleTodo = (id,completed) => {
     setTodos(currentTodos => {
@@ -36,18 +33,7 @@ export default function App() {
   } 
   return (
    <>
-    <form onSubmit={handleSubmit} className='new-item-form' action="">
-      <div className="form-row">
-        <label htmlFor="item"><h3>New Item</h3></label>
-        <input 
-          value={newItem} 
-          onChange={e => setNewItem(e.target.value)}  
-          type="text" 
-          id="item"
-        />
-      </div>
-      <button className="btn">Add</button>
-    </form>
+    <DanTodoForm/>
     <h1 className="header">Todo List</h1>
     <ul className="list"> 
       {todos.length === 0 && "No Todos"}
