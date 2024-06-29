@@ -41,6 +41,7 @@ const deleteTodo = (id) => {
   } 
   return (
    <>
+   <h1 style={{textAlign:"center"}}>Dan Todo App</h1>
     <DanTodoForm onSubmit={addTodo}/>
     <h1 className="header">Todo List</h1>
     <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo}/>
