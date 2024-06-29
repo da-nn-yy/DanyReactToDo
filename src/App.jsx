@@ -1,24 +1,7 @@
-import './App.css'
-import './styles.css'
-import  { useState } from 'react';
 
-function App() {
 
-  const [newTask,setNewTask] = useState("");
-
-  const handleChange = (e) => {
-    setNewTask(e.target.value);
-    
-
-  }
+export default function App() {
   return (
-    <>
-    <h1>Enuty Page</h1>
-    <input type="text" onChange={handleChange}/>
-
-    <p>{newTask}</p>
-    </>
+   "hi"
   )
 }
-
-export default App
