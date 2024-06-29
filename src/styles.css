@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #333;
+  background-color: linear-gradient(rgb(156, 238, 231), rgb(155,173,255));
   color: hsl(200, 100%, 90%);
   max-width: 400px;
   padding: 1rem;
@@ -24,9 +24,9 @@ body {
 }
 
 .btn {
-  background: hsl(200, 100%, 50%, 0.1);
+  background: rgb(0, 129, 194);
   border: 1px solid hsl(200, 100%, 50%);
-  color: hsl(200, 100%, 50%);
+  color: hsl(0, 0%, 100%);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
@@ -35,7 +35,7 @@ body {
 
 .btn:hover,
 .btn:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
+  opacity: 0.5;
 }
 
 .btn.btn-delete {
