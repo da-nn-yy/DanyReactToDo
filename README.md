@@ -6,6 +6,4 @@
 
 ###
 
-<img src="./assets/Screenshot 2024-07-23 184850.png"height="800" width="450" align="center"/>
-
-![alt text](image.png)
+![alt text](image-1.png)
