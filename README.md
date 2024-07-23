@@ -6,5 +6,6 @@
 
 ###
 
-<img src="https://github.com/da-nn-yy/DanyReactToDo/assets/127424822/6df481d3-b92d-44ca-8e8d-d0bdd8ab07b6" height="600" width="450" align="center"/>
+<img src="https://github.com/da-nn-yy/DanyReactToDo/assets/127424822/1a1f40fe-948a-427d-b654-6ed9501fa9f1" height="800" width="450" align="center"/>
+
 
