@@ -2,10 +2,10 @@
 
 ### A simple react Todo web that Add , check and delete a Task.
 
-### It saves the Todo Items add or checked on local storage whether the page is refreshed or not.  
+### It saves the Todo Items add or checked on local storage whether the page is refreshed or not.
 
 ###
 
-<img src="https://github.com/da-nn-yy/DanyReactToDo/assets/127424822/1a1f40fe-948a-427d-b654-6ed9501fa9f1" height="800" width="450" align="center"/>
+<img src="./assets/Screenshot 2024-07-23 184850.png"height="800" width="450" align="center"/>
 
-
+![alt text](image.png)
