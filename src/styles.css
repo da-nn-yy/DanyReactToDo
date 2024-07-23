@@ -161,3 +161,9 @@ h3{
   margin: 0;
 }
 
+li{
+  padding: 1.5rem;
+  background-color: #d1d1d149;
+  border-left: #dfd008 solid 8px;
+}
+
